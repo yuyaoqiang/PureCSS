@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+h2{
+    position: relative;
+    font-size: 14em;
+    font-weight: 800;
+    display: block;
+    z-index: 999;
+    -webkit-text-stroke: 2px #fff ;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+h3{
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 10000;
+}
+h3 span{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 5px 5px;
+    letter-spacing: 1px;
+    animation: animate 4s linear infinite;
+}
+h3 span:before{
+    content: attr(text-data);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 5px 0 5px 5px;
+
+}
+@keyframes animate{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f44336,#8d0ea2);
+    animation: color-rotate 10s linear infinite;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+.bg p{
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.5em;
+    color: rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
+    overflow: hidden;
+    z-index: 10000;
+}
+.bg p span{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 5px 5px;
+    letter-spacing: 1px;
+    animation: animate 20s linear infinite;
+}
+.bg p:nth-child(even) span {
+    animation: animate2 20s linear infinite;
+}
+.bg p span:before{
+    content: attr(text-data);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 5px 0 5px 5px;
+
+}
+@keyframes color-rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
