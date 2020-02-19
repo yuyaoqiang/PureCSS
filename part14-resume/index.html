@@ -4,9 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>个人简历 use tailWind</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>tom 简历</title>
 </head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(126, 126, 126);
+}
+body{
+    background: url("https://suisuijiang.com/assets/bg-light.jpg");
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 70%;
+    height: 90vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    flex: 1 1 auto;
+    height: 100%;
+    background: #e8e8e8;
+}
+nav{
+    width: 300px;
+    height: 100%;
+    padding: 0 20px 0 40px;
+
+}
+ul li{
+    list-style-type: none;
+}
+.name{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+}
+.name{
+    margin-bottom: 20px;
+}
+.name span:nth-child(1) span {
+    vertical-align: top;
+}
+.name span:nth-child(1) i{
+    margin-right: 6px;
+}
+.name span:nth-last-child(1) em{
+    background: #77b923;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 1px 10px;
+    margin-left: 15px;
+}
+.email{
+    margin-bottom: 20px;
+}
+.email span:nth-child(1) {
+    margin-left: -4px;
+}
+.email span:nth-child(1) span{
+   vertical-align: top;
+}
+.email span:nth-child(1) i{
+    margin-right: 4px;
+}
+.phone{
+    margin-bottom: 20px;
+}
+
+.phone span:nth-child(1) i{
+    margin-right: 12px;
+}
+.telegram{
+    margin-bottom: 20px;
+}
+.telegram span:nth-child(1) {
+    margin-left: -5px;
+}
+.telegram span:nth-child(1) i{
+    margin-right: 4px;
+}
+.address{
+    margin-bottom: 20px;
+}
+.address span:nth-child(1) {
+    margin-left: -4px;
+}
+.address span:nth-child(1) i{
+    margin-right: 8px;
+}
+.technical{
+    display: flex;
+    flex-flow: wrap;
+}
+.technical li{
+    list-style-type: none;
+    padding: 2px 10px;
+    background: #77b923;
+    margin: 2px 4px;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.summary{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: baseline;
+}
+.summary li{
+    padding: 10px;
+    flex: 0 0;
+    font-size: 16px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background: #77b923;
+    margin: 20px 0;
+}
+.fa{
+    font-size: 20px;
+}
+.header-wrap{
+  
+}
+</style>
 <body>
-    
+    <div class="container">
+        <main> 
+            <section>
+                <div class="header-wrap">
+                    <h3>工作亮点</h3>
+                    <ul>
+                        <li>
+                            <h4>独立重构后台系统</h4>
+                            <p><span>重构前:</span>现有系统维护性差,功能缺失,代码质量低,BUG数多,老板必须要加入暗黑主题模式</p>
+                            <p><span>重构后:</span>封装大量公共组件,降低代码量,加入ts增强维护性,降低维护成本,BUG数明显减少,出现问题快速修复,加入多主题,包括老板的暗黑模式</p>
+                            <p>
+                                <span>总结:</span>该项目使用ant-pro为主要UI框架,自带多主题,快速开发,使用dva作为数据流管理方案,开发速度快的要起飞,
+                                
+                            </p>
+                        </li>
+                        <li>
+                            <h4>独立维护综合彩票盘口</h4>
+                            <span></span>
+                        </li>
+                        <li>独立重构聊天室系统</li>
+                        <li>独立重构红包系统</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>工作经历</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                <span>火炬娱乐</span>
+                                <span>2019-至今</span>
+                            </p>
+                            <p>
+                                <span>亚博娱乐</span>
+                                <span>2018-2019</span>
+                            </p>
+                            <p>
+                                <span>天成集团</span>
+                                <span>2017-2018</span>
+                            </p>
+                            <p>
+                                <span>紫光集团</span>
+                                <span>2015-2017</span>
+                            </p>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+            <nav>
+                <p class="name">
+                    <span>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Tom</span>
+                    </span>
+                    <span>
+                        <em>目前在职</em>
+                    </span>
+                </p>
+                <p class="email">
+                  <span>
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </span>
+                    <span>648989873@qq.com</span>
+                </p>
+                <p class="telegram">
+                    <span>
+                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                    </span>
+                    <span>63-99533422328</span>
+                </p>
+                <p class="phone">
+                    <span>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                </span>
+                      <span>099533422328</span>
+                </p>
+                <p class="address">
+                   <span> <i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+                    <span>菲律宾</span>
+                </p>
+                <ul class="technical">
+                    <li>javaScript</li>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>Vue</li>
+                    <li>性能优化</li>
+                </ul>
+                <p class="line"></p>
+                <ul class="summary">
+                    <li>5年开发经验</li>
+                    <li>独立开发任何项目</li>
+                    <li>追求代码质量</li>
+                    <li>梦想:代码无BUG</li>
+                </ul>
+        </main>
+    </div>
 </body>
 </html>
