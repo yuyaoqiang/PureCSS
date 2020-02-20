@@ -30,20 +30,19 @@ body{
 }
 main{
     width: 70%;
-    height: 90vh;
+    margin: 60px 0;
+    
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 section{
-    flex: 1 1 auto;
-    height: 100%;
+    flex: 1 1 76%;
+    /* height: 100%; */
     background: #e8e8e8;
 }
 nav{
     width: 300px;
-    height: 100%;
     padding: 0 20px 0 40px;
 
 }
@@ -143,7 +142,64 @@ ul li{
     font-size: 20px;
 }
 .header-wrap{
-  
+  padding: 20px;
+}
+.experience{
+    margin-top: 10px;
+}
+.experience h3{
+    color: #77b923;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #77b923;
+}
+.experience ul p{
+    margin-bottom: 10px;
+    line-height:20px;
+    display: flex;
+    flex-flow:column;
+}
+.other{
+    padding: 0 20px 20px;
+}
+.other h3{
+    color: #77b923;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #77b923;
+}
+.other ul li{
+    font-size: 14px;
+    padding: 4px 0;
+}
+.header-wrap h3{
+    color: #77b923;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #77b923;
+}
+.header-wrap ul li{
+    margin-bottom: 10px;
+    line-height:20px;
+}
+.header-wrap ul li h5{
+    color: #77b923;
+}
+.header-wrap p{
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.header-wrap .before{
+    color: #f87e45;
+    font-weight: 600;
+}
+.header-wrap .after{
+    color: #77b923;
+    font-weight: 600;
+}
+.header-wrap .light{
+    color: #77b923;
+    font-weight: 600;
 }
 </style>
 <body>
@@ -154,47 +210,69 @@ ul li{
                     <h3>工作亮点</h3>
                     <ul>
                         <li>
-                            <h4>独立重构后台系统</h4>
-                            <p><span>重构前:</span>现有系统维护性差,功能缺失,代码质量低,BUG数多,老板必须要加入暗黑主题模式</p>
-                            <p><span>重构后:</span>封装大量公共组件,降低代码量,加入ts增强维护性,降低维护成本,BUG数明显减少,出现问题快速修复,加入多主题,包括老板的暗黑模式</p>
+                            <h5>*独立重构后台系统</h5>
+                            <p><span class="before">重构前:</span>现有系统维护性差,功能缺失,代码质量低,BUG数多,老板必须要加入暗黑主题模式</p>
+                            <p><span class="after">重构后:</span>封装大量公共组件,降低代码量,加入ts增强维护性,降低维护成本,BUG数明显减少,出现问题快速修复,加入多主题,满足老板的暗黑模式</p>
                             <p>
-                                <span>总结:</span>该项目使用ant-pro为主要UI框架,自带多主题,快速开发,使用dva作为数据流管理方案,开发速度快的要起飞,
-                                
+                                <span class="light">项目亮点:</span>
+                                满足老板的暗黑模式,快要飞起的开发速度,项目的维护性,扩展性大大提升,易于新同事快速上手
                             </p>
                         </li>
                         <li>
-                            <h4>独立维护综合彩票盘口</h4>
-                            <span></span>
+                            <h5>*独立维护h5综合彩票盘口</h5>
+                            <p>
+                                <span class="before">维护前:</span>该项目为彩票盘口,独立维护老旧代码,项目打包后大于1MB,手机端用户加载太慢,第三方游戏接入不全面,并且没有使用iframe框架嵌入返回游戏大厅功能,页面切换生硬,无动画
+                            </p>
+                            <p>
+                                <span class="after">维护后:</span>优化项目体积,打包后经gzip压缩,只有100KB,并增加首屏启动页,防止白屏时间过长,全面接入第三方,并使用iframe嵌入,增加第三方游戏返回游戏大厅,
+                            </p>
+                            <p>
+                                <span class="light">项目亮点:</span>
+                                优化项目体积,第三方游戏嵌入返回按钮,页面切换动画效果,首屏启动页
+                            </p>
                         </li>
-                        <li>独立重构聊天室系统</li>
-                        <li>独立重构红包系统</li>
+                        <li>
+                            <h5>*独立重构聊天室系统</h5>
+                            <p>
+                                <span class="before">重构前:</span>
+                                该项目原使用vue编写,代码臃肿,2000行代码一个页面,急需重构,逻辑复杂,维护成本太高,并且聊天内容超过500行,页面卡到爆炸,严重影响用户投注及游戏体验
+                            </p>
+                            <p>
+                                <span class="after">重构后:</span>
+                                使用react重构,将原项目聊天模块抽离成独立系统,通过iframe内嵌,将socket封装为模块,统一调用, 另外将系统通知,用户消息,系统开奖推送,红包系统等
+                                各种封装,每个业务组件不超过200行代码,业务清晰易懂,易维护,易扩展,对聊天内容超过500改为最多300条,解决聊天数量太多造成卡顿的原因(
+                                    尝试使用虚拟dom滚动,但是该方案对于图片等不固定高度兼容太差,本人技术上无法实现,只能折中,泪奔~~~~~~
+                                )
+                            </p>
+                            <p>
+                                <span class="light">项目亮点:</span>
+                                抽离为独立项目,任何项目都可嵌入,并且更加方便维护,代码行数保持200行,组件的抽离与重用,对socket.io的二次封装,逻辑更加清晰,业务流程更加易懂
+                            </p>
+                        </li>
+                        <li>
+                            <h5>*重构h5抢红包系统(高价买的系统)</h5>
+                            <p>
+                                <span class="before">重构前:</span>
+                                该项目原使用vue编写,主打抢红包,扫雷,牛牛等玩法,由于页面加载缓慢,页面UI太过丑陋,缺少相应功能,不符合老板需求,所以需要重构,并且需要在10天内完成
+                            </p>
+                            <p>
+                                <span class="after">重构后:</span>
+                                主要对页面UI进行优化,提升视觉效果及用户交互体验,对首屏加载优化,减小打包体积
+                            </p>
+                            <p>
+                                <span class="light">项目亮点:</span>
+                                10天内加班加点,实现需求,配合同事并行开发,主动承担额外功能开发,项目无亮点
+                            </p>
+                        </li>
                     </ul>
                 </div>
-                <div>
-                    <h3>工作经历</h3>
+                <div class="other">
+                    <h3>其他项目</h3>
                     <ul>
-                        <li>
-                            <p>
-                                <span>火炬娱乐</span>
-                                <span>2019-至今</span>
-                            </p>
-                            <p>
-                                <span>亚博娱乐</span>
-                                <span>2018-2019</span>
-                            </p>
-                            <p>
-                                <span>天成集团</span>
-                                <span>2017-2018</span>
-                            </p>
-                            <p>
-                                <span>紫光集团</span>
-                                <span>2015-2017</span>
-                            </p>
-                        </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>团队协作开发风控后台管理系统</li>
+                        <li>团队协作开发客户关系维护管理系统</li>
+                        <li>独立开发彩票走势图PC端系统</li>
+                        <li>独立开发彩票走势图H5端系统</li>
                     </ul>
                 </div>
             </section>
@@ -244,6 +322,29 @@ ul li{
                     <li>追求代码质量</li>
                     <li>梦想:代码无BUG</li>
                 </ul>
+                <div class="experience">
+                    <h3>工作经历</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                <span>火炬娱乐(高级开发)</span>
+                                <span>2019-至今</span>
+                            </p>
+                            <p>
+                                <span>亚博娱乐(中高级开发)</span>
+                                <span>2018-2019</span>
+                            </p>
+                            <p>
+                                <span>天成集团(中级开发)</span>
+                                <span>2017-2018</span>
+                            </p>
+                            <p>
+                                <span>紫光集团(中级开发)</span>
+                                <span>2015-2017</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
         </main>
     </div>
 </body>
